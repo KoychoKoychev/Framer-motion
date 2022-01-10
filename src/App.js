@@ -1,9 +1,17 @@
 import "./App.css";
+import  { motion }  from "framer-motion"
 
 function App() {
   return (
     <div className="App">
-      <form>
+      <motion.form
+      animate={{ x: [500,-50,0] }}
+      transition={{
+        duration: 2,
+          ease: "easeInOut",
+          repeatDelay: 1
+      }}
+      >
         <h1>Create An Account</h1>
         <label>
           Email:
@@ -14,7 +22,7 @@ function App() {
           <input name="password" type="password" required />
         </label>
         <button>Sign Up!</button>
-      </form>
+      </motion.form>
     </div>
   );
 }

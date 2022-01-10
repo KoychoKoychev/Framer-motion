@@ -5,11 +5,12 @@ function App() {
   return (
     <div className="App">
       <motion.form
+      initial="visible"
       animate={{ x: [500,-50,0] }}
       transition={{
         duration: 2,
-          ease: "easeInOut",
-          repeatDelay: 1
+        ease: "easeInOut",
+        repeatDelay: 1
       }}
       >
         <h1>Create An Account</h1>
